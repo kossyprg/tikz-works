@@ -1,0 +1,39 @@
+[
+    {
+        "title": "オペアンプの記号",
+        "tags": ["電子回路"],
+        "href": "diagrams/opamp/index.html",
+        "img": "diagrams/opamp/image.png"
+    },
+    {
+        "title": "反転増幅回路",
+        "tags": ["電子回路"],
+        "href": "diagrams/inverting-amplifier-circuit/index.html",
+        "img": "diagrams/inverting-amplifier-circuit/image.png"
+    },
+    {
+        "title": "非反転増幅回路",
+        "tags": ["電子回路"],
+        "href": "diagrams/non-inverting-amplifier-circuit/index.html",
+        "img": "diagrams/non-inverting-amplifier-circuit/image.png"
+    },
+    {
+        "title": "ボルテージフォロワ",
+        "tags": ["電子回路"],
+        "href": "diagrams/voltage-follower/index.html",
+        "img": "diagrams/voltage-follower/image.png"
+    },
+    {
+        "title": "2入力加算回路(オペアンプ)",
+        "tags": ["電子回路"],
+        "href": "diagrams/opamp-adder-circuit/index.html",
+        "img": "diagrams/opamp-adder-circuit/image.png"
+    },
+    {
+        "title": "n入力加算回路(オペアンプ)",
+        "tags": ["電子回路"],
+        "href": "diagrams/opamp-adder-circuit-n-inputs/index.html",
+        "img": "diagrams/opamp-adder-circuit-n-inputs/image.png"
+    }
+  ]
+  

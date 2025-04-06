@@ -1,0 +1,26 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[papersize={7cm,6cm},margin=1mm,noheadfoot]{geometry}
+\usepackage{tikz}
+\usepackage[RPvoltages]{circuitikz}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \begin{circuitikz}[european voltages,european resistors,>=Stealth]
+            \draw (0,0) node[above]{$v_\mathrm{i}$} 
+            to[short,o-] ++ (0.2,0)
+            to[short] ++ (1,0) node[op amp,noinv input up,anchor=+](OA){}
+            (OA.-) --++ (-0.5,0) 
+            to[short,-*] ++(0,-1.2) coordinate(FB)
+            (OA.out) --++ (0.5,0) coordinate(tmp)
+            (FB) to[R,l=$R_1$] ++ (0,-2) node[sground]{}
+            (FB) to[R,l=$R_2$] (FB -| tmp) 
+            to[short,-*] (tmp)
+            to[short,-o] ++ (0.7,0) node[right]{$v_\mathrm{o}$};
+        \end{circuitikz}
+    \end{center}
+\end{figure}
+
+\end{document}

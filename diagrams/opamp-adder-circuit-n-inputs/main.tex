@@ -1,0 +1,35 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[papersize={10cm,7cm},margin=1mm,noheadfoot]{geometry}
+\usepackage{tikz}
+\usepackage[RPvoltages]{circuitikz}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \begin{circuitikz}[european voltages,european resistors,>=Stealth]
+            \draw (0,0) node[left]{$v_1$} coordinate (O) 
+            (O) to[short,o-] ++ (0.5,0)
+            to[R,l=$R_1$] ++(2,0) 
+            to[short,-*] ++ (0.5,0) coordinate(FB1)
+            (0,-1) node[left]{$v_2$} to[short,o-] ++ (0.5,0)
+            to[R,l=$R_2$] ++(2,0) 
+            to[short,-*] ++ (0.5,0) coordinate(FB2)
+            (0,-3) node[left]{$v_n$} to[short,o-] ++ (0.5,0)
+            to[R,l=$R_n$] ++(2,0) 
+            to[short,-*] ++ (0.5,0) coordinate(FBn)
+            (FBn) --++ (0.5,0) node[op amp,anchor=-](OA){}
+            (OA.out) to[short,-*] ++ (0.5,0) coordinate(tmp)
+            (FB1) to[R,l=$R_\mathrm{F}$] ++(3,0) -| (tmp)
+            (OA.+) --++ (-0.5,0) --++ (0,-1) node[sground]{}
+            (tmp) to[short,-o] ++(1,0) node[right]{$v_\mathrm{o}$}
+            (FB1) -- (FB2) --++(0,-0.5)
+            (FBn) --++ (0,0.5);
+            \node at (1.5,-1.8) {$\vdots$};
+            \node at (3,-1.8) {$\vdots$};
+        \end{circuitikz}
+    \end{center}
+\end{figure}
+
+\end{document}

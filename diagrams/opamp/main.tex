@@ -1,0 +1,22 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[papersize={5cm,4cm},margin=1mm,noheadfoot]{geometry}
+\usepackage{tikz}
+\usepackage[RPvoltages]{circuitikz}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{circuitikz}[straight voltages,>=Stealth]
+        \draw
+        (0,0) node[op amp, noinv input up] (opamp) {}
+        (opamp.+) node[left] {$v_+$} to[short,-o] (opamp.+)
+        (opamp.-) node[left] {$v_-$} to[short,-o] (opamp.-)
+        (opamp.out) node[right] {$v_\mathrm{o}$} to[short,-o] (opamp.out)
+        (opamp.down) ++ (0,-0.5) node[below] {$V^-$} -- (opamp.down)
+        (opamp.up) ++ (0,.5) node[above] {$V^+$} -- (opamp.up);
+    \end{circuitikz}
+\end{figure}
+
+\end{document}
