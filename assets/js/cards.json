@@ -34,6 +34,12 @@
         "tags": ["電子回路"],
         "href": "diagrams/opamp-adder-circuit-n-inputs/index.html",
         "img": "diagrams/opamp-adder-circuit-n-inputs/image.png"
+    },
+    {
+        "title": "オイラーの公式",
+        "tags": ["数学"],
+        "href": "diagrams/euler-formula/index.html",
+        "img": "diagrams/euler-formula/image.png"
     }
   ]
   

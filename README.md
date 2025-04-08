@@ -1,6 +1,10 @@
 # Tikz works
 
-This repository is dedicated to publishing diagrams created using TikZ.  
+This repository is dedicated to publishing diagrams created using TikZ.
+
+[https://kossyprg.github.io/tikz-works/](https://kossyprg.github.io/tikz-works/)
+
+Run `python -m http.server 8000` to preview locally at http://localhost:8000.
 
 ## Diagram Creation Environment
 
