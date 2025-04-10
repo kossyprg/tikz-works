@@ -145,3 +145,8 @@ a {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+.main-content {
+  width: 80%;
+  margin: 0 auto;
+}

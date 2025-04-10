@@ -14,15 +14,14 @@
   <main>
     <section class="main-content">
       <div class="description">
-        <p>ボルテージフォロワ（voltage follower）の基本構成です。</p>
-        <ul>
-          <li>\(v_\mathrm{i}\)：入力電圧</li>
-          <li>\(v_\mathrm{o}\)：出力端子</li>
-        </ul>
-        <p>出力電圧 \(v_\mathrm{o}\) は入力電圧に等しくなります。</p>
-        \[v_\mathrm{o} = v_\mathrm{i}\]
+        <p>フェーザ(phasor)とそれに対応する時間領域の正弦波信号との関係を示しています。</p>
+        <p>振幅 \(V\)、角周波数 \(\omega\) の正弦波信号 \(v(t)\) を次式で与えます。</p>
+        \[v(t) = V\sin{(\omega t + \theta)}\]
+        <p>ここで \(\theta\) は初期位相です。フェーザ \(\dot{V} = V\mathrm{e}^{\mathrm{j}\theta}\) を用いると、正弦波信号は次式で表されます。</p>
+        \[v(t) = \mathrm{Im}[\dot{V}\mathrm{e}^{\mathrm{j}\omega t}]\]
+        <p>ただし、\(\mathrm{Im}[\cdot]\) は虚部を取る操作です。</p>
       </div>
-      <img src="image.png" alt="" style="max-width: 100%;">
+      <img src="image.gif" alt="" style="max-width: 100%;">
     </section>
     <!-- TeXファイルへのリンク -->
     <section>

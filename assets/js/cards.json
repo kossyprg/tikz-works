@@ -40,6 +40,12 @@
         "tags": ["数学"],
         "href": "diagrams/euler-formula/index.html",
         "img": "diagrams/euler-formula/image.png"
+    },
+    {
+        "title": "フェーザと正弦波信号の関係",
+        "tags": ["数学"],
+        "href": "diagrams/phasor-animation/index.html",
+        "img": "diagrams/phasor-animation/image.gif"
     }
   ]
   
