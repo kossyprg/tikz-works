@@ -1,15 +1,20 @@
-# Tikz works
+# TikZ Works
 
-This repository is dedicated to publishing diagrams created using TikZ.
+TikZ で作成した図を公開しています。
 
 [https://kossyprg.github.io/tikz-works/](https://kossyprg.github.io/tikz-works/)
 
-Run `python -m http.server 8000` to preview locally at http://localhost:8000.
+## ローカル環境での実行方法
 
-## Diagram Creation Environment
+下記のコマンドを実行し、[http://127.0.0.1:4000](http://127.0.0.1:4000) にアクセスしてください。
 
-The environment used to create and compile these diagrams is hosted in a separate repository.  
-That repository includes build instructions, required packages, and templates.
+```sh
+bundle exec jekyll build
+bundle exec jekyll serve
+```
 
-→ Environment repository: [Tikz-env](https://github.com/kossyprg/tikz-env)  
+## 画像の追加方法
 
+1. TikZ で画像を作成する。環境は [Tikz-env](https://github.com/kossyprg/tikz-env) を使用する。
+2. [tikz-works/images](tikz-works/images/) フォルダに画像、[tikz-works/tex](tikz-works/tex/) フォルダに TeX ファイルを追加する。
+3. [_tikz-works](_tikz-works/) フォルダに、ソースファイルの場所と図の説明を記載した md ファイルを追加する。
