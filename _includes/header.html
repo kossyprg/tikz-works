@@ -1,10 +1,11 @@
 <header>
-  <h1><a href="{{ '/index.html' | relative_url }}">TikZ works</a></h1>
+  <h1><a href="{{ '/index.html' | relative_url }}" class="no-style">TikZ works</a></h1>
   {% if page.url == '/' %}
     <!-- フィルタリング用のコントロール（トップページのみ表示） -->
     <div id="filter-controls">
       <button data-tag="all">すべて</button>
       <button data-tag="electronic-circuit">電子回路</button>
+      <button data-tag="electromagnetism">電磁気学</button>
       <button data-tag="math">数学</button>
     </div>
   {% endif %}
