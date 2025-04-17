@@ -5,8 +5,6 @@ scripts:
   - init-filter.js
 ---
 
-{% include header.html %}
-
 <!-- テンプレート -->
 <template id="card-template">
   <div class="cell" data-tags="">
@@ -29,4 +27,3 @@ scripts:
     {% endfor %}
   </div>
 </main>
-{% include footer.html %}

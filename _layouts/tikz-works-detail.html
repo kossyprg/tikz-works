@@ -1,21 +1,20 @@
 ---
 layout: default-tikz
-title: TikZ works
 ---
-
-{% include header.html %}
 
 <main>
   <h2>{{ page.image_title }}</h2>
   <section class="main-content">
     <div class="description">{{ content }}</div>
-    <img src="{{ '/tikz-works/images/' | append: page.image_src | relative_url }}" alt="{{ page.image_title }}" style="max-width: 100%"/>
-  </section>
-
-  <section>
-    <p>
-      <a href="{{ '/tikz-works/tex/' | append: page.tex_src | relative_url }}" target="_blank" rel="noopener noreferrer">TeXファイル</a>
-    </p>
+    <img src="{{ '/tikz-works/images/' | append: page.image_src | relative_url }}" alt="{{ page.image_title }}" style="max-width: 60%"/>
+    {% raw %}
+    <pre><code id="tex-code" class="language-latex"></code></pre>
+    {% endraw %}
+    <script>     
+      document.addEventListener('DOMContentLoaded', () => {
+        loadTexFile("{{ '/tikz-works/tex/' | append: page.tex_src | relative_url }}");
+      });
+    </script>
   </section>
   <nav>
     <a href="{{ '/index.html' | relative_url }}">トップページに戻る</a>
