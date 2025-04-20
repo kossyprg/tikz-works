@@ -1,13 +1,13 @@
 ---
 layout: tikz-works-detail
-image_title: 円偏光
+image_title: 直線偏光
 tags: 
  - electromagnetism
-image_src: circular-polarization.gif
-tex_src:   circular-polarization.tex
+image_src: linear-polarization.gif
+tex_src:   linear-polarization.tex
 ---
 
-\\(z\\) 軸方向に伝播する右回り円偏光（right-handed circular polarization: RHCP）を示した図です。
+\\(z\\) 軸方向に伝播する直線偏光（linear polarization）を示した図です。
 青色の矢印は電場ベクトル、赤色の矢印はある \\(xy\\) 平面で観測した電場ベクトルを表します。  
 
 \\(z\\) 軸方向に伝播する電界ベクトル \\(\boldsymbol{E}(z,t)\\) は次式で与えられます。
@@ -21,6 +21,14 @@ tex_src:   circular-polarization.tex
 - \\(\omega\\)：角周波数
 - \\(k\\)：波数
 
-初期位相の差 \\(\delta := \phi_y - \phi_x\\) について、\\(m\\) を整数として \\(\delta = (2m + 1/2)\pi\\) が成立するときに右回り円偏光、\\(\delta = (2m - 1/2)\pi\\) が成立するときに左回り円偏光となります。
+初期位相の差 \\(\delta := \phi_y - \phi_x\\) について、\\(m\\) を整数として \\(\delta = m\pi\\) が成立するとき、電磁波は直線偏光になります。
+直線偏光の傾き角を \\(\theta\\) とすると、\\(\delta\\) に応じて次式で与えられます。
+\\[
+\theta = 
+\begin{cases}
+\arctan{\left(\dfrac{A_y}{A_x}\right)} & (\delta = 2m\pi) \newline
+\pi - \arctan{\left(\dfrac{A_y}{A_x}\right)} & (\delta = (2m+1)\pi)
+\end{cases}
+\\]
 
 より詳しい解説は、[こちら](https://zenn.dev/kossyprg/articles/daigakudenki-polarization)を参照してください。
