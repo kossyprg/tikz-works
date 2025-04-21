@@ -1,0 +1,41 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[papersize={5.5cm,5.5cm},margin=1mm,noheadfoot]{geometry}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage[RPvoltages]{circuitikz}
+\pagestyle{empty}
+
+\begin{document}
+
+\tikzset{axis_style/.style={black,thin,>=Stealth,->}}
+\tdplotsetmaincoords{60}{110}
+
+\begin{tikzpicture}[scale=3,tdplot_main_coords,>=Stealth]
+  
+% 球面座標(r, theta, phi)
+\def\radius{1.2}
+\def\zenithAngle{45} % 天頂角(0 <= theta <= 180)
+\def\azimuthAngle{60} % 方位角(0 <= phi < 360)
+
+% 軸
+\coordinate (O) at (0,0,0);
+\draw[axis_style] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+\draw[axis_style] (0,0,0) -- (0,1,0) node[anchor=west]{$y$};
+\draw[axis_style] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+
+% ベクトル
+\tdplotsetcoord{P}{\radius}{\zenithAngle}{\azimuthAngle}
+\draw[black,thick,->] (O)  -- (P);
+\node at (0.5,0.5,0.5) {$\bm{r}$};
+
+% 補助線など
+\draw[dashed,black] (O)  -- (Pxy); % Pxyは点Pのxy平面への射影
+\draw[dashed,black] (P)  -- (Pxy);
+\tdplotdrawarc[->]{(O)}{0.2}{0}{\azimuthAngle}{anchor=north}{$\phi$}
+\tdplotsetthetaplanecoords{\azimuthAngle}
+\tdplotdrawarc[->,tdplot_rotated_coords]{(O)}{0.3}{0}{\zenithAngle}{anchor=south west}{$\theta$}
+
+\end{tikzpicture}
+
+\end{document}
