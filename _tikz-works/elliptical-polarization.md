@@ -1,13 +1,13 @@
 ---
 layout: tikz-works-detail
-image_title: 直線偏光
+image_title: 楕円偏光
 tags: 
  - electromagnetism
-image_src: linear-polarization.gif
-tex_src:   linear-polarization.tex
+image_src: elliptical-polarization.gif
+tex_src:   elliptical-polarization.tex
 ---
 
-\\(z\\) 軸方向に伝播する直線偏光（linear polarization）を示した図です。
+\\(z\\) 軸方向に伝播する楕円偏光（elliptical polarization）を示した図です。
 青色の矢印は電場ベクトル、赤色の矢印はある \\(xy\\) 平面で観測した電場ベクトルを表します。  
 
 \\(z\\) 軸方向に伝播する電界ベクトル \\(\boldsymbol{E}(z,t)\\) は次式で与えられます。
@@ -21,13 +21,20 @@ tex_src:   linear-polarization.tex
 - \\(\omega\\)：角周波数
 - \\(k\\)：波数
 
-初期位相の差 \\(\delta := \phi_y - \phi_x\\) について、\\(m\\) を整数として \\(\delta = m\pi\\) が成立するとき、電磁波は直線偏光になります。
-直線偏光の傾き角を \\(\theta\\) とすると、\\(\delta\\) に応じて次式で与えられます。
+電界ベクトルの \\(x, y\\) 成分 \\(E_x, E_y\\) は、\\(A_x \neq 0, A_y \neq 0\\) の条件下で次式を満たします。
+
+\\[
+\left( \frac{E_x}{A_x} \right)^2 + \left( \frac{E_y}{A_y} \right)^2 - \frac{2E_xE_y \cos \delta}{A_xA_y} = \sin^2 \delta 
+\\]
+
+ただし、初期位相の差を \\(\delta := \phi_y - \phi_x\\) としています。
+楕円の \\(x\\) 軸から測った傾き角 \\(\theta\\) について次式が成立します。
+
 \\[
 \theta = 
 \begin{cases}
-\arctan{\left(\dfrac{A_y}{A_x}\right)} & (\delta = 2m\pi) \newline
-\pi - \arctan{\left(\dfrac{A_y}{A_x}\right)} & (\delta = (2m+1)\pi)
+\pi/4 & (A_x = A_y) \newline
+\tan 2\theta = \dfrac{2A_xA_y \cos \delta}{A_x^2 - A_y^2} & (A_x \neq A_y)
 \end{cases}
 \\]
 

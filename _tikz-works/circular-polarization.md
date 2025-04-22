@@ -23,4 +23,4 @@ tex_src:   circular-polarization.tex
 
 初期位相の差 \\(\delta := \phi_y - \phi_x\\) について、\\(m\\) を整数として \\(\delta = (2m + 1/2)\pi\\) が成立するときに右回り円偏光、\\(\delta = (2m - 1/2)\pi\\) が成立するときに左回り円偏光となります。
 
-より詳しい解説は、[こちら](https://zenn.dev/kossyprg/articles/daigakudenki-polarization)を参照してください。
+詳しい解説は、[こちら](https://zenn.dev/kossyprg/articles/daigakudenki-polarization)を参照してください。
