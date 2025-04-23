@@ -1,0 +1,49 @@
+\documentclass[dvipdfmx]{jsarticle}
+\usepackage[papersize={10cm,8cm},margin=1mm,noheadfoot]{geometry}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage[RPvoltages]{circuitikz}
+\usepackage[nomessages]{fp}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{figure}[htbp]
+    \begin{center}
+        \begin{circuitikz}[>=Stealth]
+            % 正五角形の座標の定義
+            \FPset\radius{2.5}
+            \def\initDeg{90}
+            \def\dtheta{72} % 360 / 5
+            \coordinate (A) at ({\radius*cos(\initDeg)}, {\radius*sin(\initDeg)});
+            \coordinate (B) at ({\radius*cos(\initDeg + \dtheta)}, {\radius*sin(\initDeg + \dtheta)});
+            \coordinate (C) at ({\radius*cos(\initDeg + \dtheta * 2)}, {\radius*sin(\initDeg + \dtheta * 2)});
+            \coordinate (D) at ({\radius*cos(\initDeg + \dtheta * 3)}, {\radius*sin(\initDeg + \dtheta * 3)});
+            \coordinate (E) at ({\radius*cos(\initDeg + \dtheta * 4)}, {\radius*sin(\initDeg + \dtheta * 4)});
+
+            % 描画のための点
+            \coordinate (F) at ({\radius*cos(\initDeg + \dtheta * 2)}, {\radius*sin(\initDeg + \dtheta * 2) - 1}); % C ++ (0, -1)
+            \coordinate (G) at ({\radius*cos(\initDeg + \dtheta * 3)}, {\radius*sin(\initDeg + \dtheta * 3) - 1}); % D ++ (0, -1)
+            \coordinate (H) at ({\radius*cos(\initDeg + \dtheta * 3) - 2.1}, {\radius*sin(\initDeg + \dtheta * 3) - 0.2}); % D ++ (0, -1)
+            
+            % 回路素子の定義
+            \ctikzset{label/align = straight} % ラベルが斜めにならないようにする
+            \draw (B) to [american inductor,l_=$L_3$,f>_=$i_3$,-*] (A);
+            \draw (B) to [C,l_=$C$,*-] (C);
+            \draw (D) to [american inductor,l_=$L_2$,f>_=$i_2$,-*] (C);
+            \draw (E) to [american inductor,l=$L_1$,f>_=$i_1$,-*] (D);
+            \draw (E) to [european resistor=$R$,*-] (A);
+            \draw (A) to [short] ++(90:0.8);
+            \draw (B) to [short] ++(162:0.8);
+            \draw (C) to [short] ++(234:0.8);
+            \draw (D) to [short] ++(306:0.8);
+            \draw (E) to [short] ++(18:0.8);
+            \draw (F) to [american inductor,f^<=$i_4$] (G);
+            \draw (F) to [short] ++(0,-0.8);
+            \draw (G) to [short] ++(0,-0.8);
+            \draw [black,<->] (H) arc [radius=0.4, start angle=135, end angle=225];
+            \node at (-1.1,-2.5) {$M$};
+        \end{circuitikz}
+    \end{center}
+\end{figure}
+\end{document}
