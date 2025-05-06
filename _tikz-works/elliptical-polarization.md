@@ -34,7 +34,7 @@ tex_src:   elliptical-polarization.tex
 \theta = 
 \begin{cases}
 \pi/4 & (A_x = A_y) \newline
-\tan 2\theta = \dfrac{2A_xA_y \cos \delta}{A_x^2 - A_y^2} & (A_x \neq A_y)
+\left.\arctan{\left(\dfrac{2A_xA_y \cos \delta}{A_x^2 - A_y^2}\right)} \right/ 2 & (A_x \neq A_y)
 \end{cases}
 \\]
 
