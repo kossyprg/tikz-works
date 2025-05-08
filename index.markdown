@@ -1,6 +1,5 @@
 ---
 layout: default-tikz
-title: TikZ works
 scripts:
   - init-filter.js
 ---

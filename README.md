@@ -9,8 +9,7 @@ TikZ で作成した図を公開しています。
 下記のコマンドを実行し、[http://127.0.0.1:4000](http://127.0.0.1:4000) にアクセスしてください。
 
 ```sh
-bundle exec jekyll build
-bundle exec jekyll serve
+bundle exec jekyll build; bundle exec jekyll serve
 ```
 
 ## 画像の追加方法
