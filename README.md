@@ -17,3 +17,5 @@ bundle exec jekyll build; bundle exec jekyll serve
 1. TikZ で画像を作成する。環境は [Tikz-env](https://github.com/kossyprg/tikz-env) を使用する。
 2. [tikz-works/images](tikz-works/images/) フォルダに画像、[tikz-works/tex](tikz-works/tex/) フォルダに TeX ファイルを追加する。
 3. [_tikz-works](_tikz-works/) フォルダに、ソースファイルの場所と図の説明を記載した md ファイルを追加する。
+
+タグを追加するときは、[_includes/header.html](_includes/header.html) の `filter-controls` に追記する。
